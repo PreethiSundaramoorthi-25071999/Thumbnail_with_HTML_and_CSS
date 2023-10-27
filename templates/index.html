@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Youtube UI </title>
+</head>
+<body>
+    {%for i in list1%}
+    <div class="right-sidebar">
+        <div class="side_video_list">
+
+            <a href="#" class="small_thumbnail" >
+               <img src="{{i.thumbnail}}">
+            </a>
+            
+        
+            <div class="vid-info">
+                {{i.description}}
+                <div class="small-thumbnail-channel" >
+                <img src="{{i.thumbnail}}">
+                    <a href="#" ><p>{{i.channel}}</p></a>
+                </div>   
+                    <p>{{i.views}}</p>            
+            </div>
+        </div>
+    </div>
+    {%endfor%}
+
+</body>
+</html>
